@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="register" method="post" th:object="${bankUp}">
+<input type="hidden" name="Id" th:value="${bankUp.Id}">
+<input type="text" name="bankName" placeholder="enter bankname"th:value="${bankUp.bankName}"><br><br>
+<input type="text" name="acctype" placeholder="enter acctype" th:value="${bankUp.acctype}"><br><br>
+<input type="text" name="branch" placeholder="enter branch" th:value="${bankUp.branch}"><br><br>
+<button type="submit">UPDATE</button>
+</form>
+</body>
+</html>

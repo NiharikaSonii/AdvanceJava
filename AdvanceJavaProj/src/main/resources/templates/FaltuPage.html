@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+	<tr>
+		<th>ID</th>
+		<th>NAME</th>
+		<th>Account type</th>
+		<th>CITY</th>
+	</tr>
+	<tr th:each="bank : ${b1}">
+	 <td th:text=${bank.Id}></td>
+	 <td th:text=${bank.bankName}></td>
+	 <td th:text=${bank.acctype}></td>
+	 <td th:text=${bank.branch}></td>
+	 <td><a  th:href="@{/delete/{Id}(Id=${bank.Id})} "><button type="button">delete</button></a></td>  
+	 <td><a  th:href="@{/edit/{Id}(Id=${bank.Id})} "><button type="button">update</button></a></td>
+	</tr>
+	
+</table>	
+
+</body>
+</html>
